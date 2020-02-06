@@ -5,7 +5,6 @@ import SideBar from './components/SideBar/SideBar';
 import Content from './components/Content/Content';
 import Footer from './components/Footer/Footer';
 
-
 function App() {
   return (
     <Fabric className="App">

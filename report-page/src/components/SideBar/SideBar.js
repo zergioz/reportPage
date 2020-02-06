@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { PropTypes as Menu } from 'prop-types';
 import { Nav } from 'office-ui-fabric-react/lib/Nav'
+import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
+import './SideBar.css'
+initializeIcons(/* optional base url */);
+
 
 export default class SideBar extends Component {
     
@@ -14,29 +18,36 @@ export default class SideBar extends Component {
                     url: 'http://example.com',
                     links: [{
                         name: 'Activity',
-                        url: 'http://msn.com',
+                        url: 'http://domain.com',
+                        icon: 'Fingerprint',
                     },{
-                        name: 'News',
-                        url: 'http://msn.com',
+                        name: 'Report',
+                        url: 'http://domain.com',
+                        icon: 'BarChartHorizontal',
                     }],
-                isExpanded: true,
+                isExpanded: false,
                 },{
                     name: 'Documents',
-                    url: 'http://example.com',
+                    url: 'http://domain.com',
                     isExpanded: true,
+                    icon: 'DocumentSet',
                 },{
                     name: 'Pages',
-                    url: 'http://msn.com',
+                    url: 'http://domain.com',
+                    icon: 'Document',
                 },{
                     name: 'Notebook',
-                    url: 'http://msn.com',
+                    url: 'http://domain.com',
+                    icon: 'EditNote',
                 },{
-                    name: 'Long Name Test for elipsis. Longer than 12em!',
-                    url: 'http://example.com',
+                    name: 'Other',
+                    url: 'http://domain.com',
+                    icon: 'SharepointAppIcon16',
                 },{
                     name: 'Edit Link',
-                    url: 'http://example.com',
+                    url: 'http://domain.com',
                     iconClassName: 'ms-Icon--Edit',
+                    icon: 'Fingerprint',
                 },{
                     name: 'Edit',
                     url: '#',
