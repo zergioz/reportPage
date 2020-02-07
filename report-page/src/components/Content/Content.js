@@ -2,9 +2,12 @@ import React, { Component } from 'react'
 import { Breadcrumb } from 'office-ui-fabric-react/lib/Breadcrumb'
 import { CommandBar } from 'office-ui-fabric-react/lib/CommandBar'
 import { Selection, SelectionMode } from 'office-ui-fabric-react/lib/utilities/selection'
-import { MarqueeSelection } from 'office-ui-fabric-react/lib/MarqueeSelection'
 import './Content.css'
-import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
+import { Depths } from '@uifabric/fluent-theme/lib/fluent/FluentDepths';
+import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
+import { Grid } from 'office-ui-fabric-react/lib/Grid';
+import { DatePicker } from 'office-ui-fabric-react/lib/DatePicker';
+
 
 let  breadcrumbs = [
   {key:1, text: 'Home>', onClick: console.log('here')},
@@ -60,21 +63,31 @@ export default class Content extends Component {
     }
     
     Body = ({groups, expanded, collapsed}) => (
-      <div className="container">
+      <div className="container" class="ms-Grid" dir="ltr">
         <Breadcrumb className="breadcrumbs" 
           items={breadcrumbs} 
           maxDisplayedItems={5}
         />
-        <CommandBar isSearchBoxVisible={true} 
-          items = {breadcrumbs} 
-          overflowItems={breadcrumbs} 
-          overflowButtonProps={this.createListItems} 
-          farItems={createListItems} 
-          ariaLabel="Use left and right arrow keys to navigate between commands" />
-        <div className="selection">
-        <MarqueeSelection selection={this.state} isEnabled={this.state === SelectionMode.multiple}/>
+        <div style={{ boxShadow: Depths.depth8 }}>
+          <CommandBar isSearchBoxVisible={true} 
+            items = {breadcrumbs} 
+            overflowItems={breadcrumbs} 
+            overflowButtonProps={this.createListItems} 
+            farItems={createListItems} 
+            ariaLabel="Use left and right arrow keys to navigate between commands"/>
         </div>
-      </div>
+        <DefaultButton
+          text='See Button'
+          primary={ true }
+          href='#/components/button'
+        />
+        <div class="ms-Grid" dir="ltr">
+          <div class="ms-Grid-row" style={{Grid}}>
+            <div class="ms-Grid-col ms-sm6 ms-md4 ms-lg2"> <DatePicker /></div>
+            <div class="ms-Grid-col ms-sm6 ms-md8 ms-lg10">B</div>
+          </div>
+        </div>
+      </div>  
     )
 
     render() {

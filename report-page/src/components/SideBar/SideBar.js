@@ -16,6 +16,7 @@ export default class SideBar extends Component {
                 links: [{
                     name: 'Home',
                     url: 'http://example.com',
+                    className: 'linkBar',
                     links: [{
                         name: 'Activity',
                         url: 'http://domain.com',

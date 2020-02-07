@@ -12,12 +12,12 @@ function App() {
         <NavBar/>
       </div>
       <div className="body">
-        <div className="content">
-            <Content/>
-        </div>
-        <div className="sidebar">
+        <div className="SidebarMenu">
           <SideBar/>
-        </div>      
+        </div>
+        <div className="content">
+          <Content/>
+        </div>        
       </div>
       <div className="footer">
         <Footer/>

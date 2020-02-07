@@ -1,0 +1,13 @@
+.SidebarMenu{
+    background-color: #323130;
+    color: #fff;
+}
+.ms-Nav-linkText {
+    color: #ffff;
+}
+.ms-Nav-navItem:hover { 
+   background-color: #323130;
+}
+.ms-Nav-chevron{
+    color: #fff;
+}
