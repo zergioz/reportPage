@@ -1,22 +1,27 @@
+
 .body .container {
     padding: 1em;
-  }
-  .body .ms-Breadcrumb {
+}
+.body .ms-Breadcrumb {
     margin-top: 0;
     margin-bottom: 1em;
-  }
-  
-  .body .selection {
+}
+.body .selection {
     height: calc(100vh - 16.5em);
     overflow-x: auto;
   }
-  
-  .body .selection .selection-item {
+.body .selection .selection-item {
     display: flex;
     padding: 0.5em;
   }
-  
-  .body .selection .selection-item .name {
-    margin-left: 1em;
-  }
-  
+.body .selection .selection-item .name {
+  margin-left: 1em;
+}
+.block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px black solid;
+    text-align: center;
+    color:white;
+    background-color: gray;
+}
