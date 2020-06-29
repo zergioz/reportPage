@@ -19,7 +19,7 @@ export default class NavBar extends Component {
   TopBar = ({onChange, onSearch}) => (
       <div className="NavBar">
         <div className="logo ms-font-xl">
-          <strong>Report Dashboard</strong>
+          <strong>J55 Country Dashboard</strong>
         </div>
         <div className="searchbox">
           <SearchBox labelText="Search"  onChange={this.handleSearch}/>
